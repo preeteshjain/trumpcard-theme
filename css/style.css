@@ -1,0 +1,303 @@
+body {
+	background-image: url('http://static.tumblr.com/w8b4xyr/RaKn84uw2/skulls.png');
+	background-repeat: repeat;
+	color: black;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	text-decoration: none;
+	color: #FFF;
+}
+
+#nav-header {
+	width: 100%;
+	top: 0;
+	height: 80px;
+	z-index: 100; /* Some very large value. (safeguard measure) */
+	background: #468966;
+	box-shadow: 0px 1px 5px #888888;
+}
+
+ul.nav {
+	list-style: none;
+	float: right;
+	margin-top: 1em;
+}
+
+ul.nav li {
+	float: left;
+	margin-top: 0.75em;
+	color: #f1c40f;
+}
+
+ul.nav li a {
+	padding: 20px;
+	border-radius: 25px;
+	margin-right: 40px; 
+}
+
+ul.nav li a:hover {
+	padding: 18px;
+	border: 2px solid white;
+}
+
+#blog-logo {
+	margin-top: 2.5em;
+	font-size: 0.60em;
+}
+
+#body-contents {
+	text-align: center;
+}
+
+#body-contents a {
+	color: #B64926;
+}
+
+#blog-desc {
+	font-weight: lighter;
+	font-size: 1.4em;
+	color: #468966;
+}
+
+.post-text {
+	text-align: justify;
+}
+
+#posts {
+	text-align: center;
+	left: 500px;
+}
+
+#side-nav {
+	width: 200px;
+	height: 200px;
+	margin-top: 15px;
+	position: fixed;
+}
+
+#post {
+	padding: 20px;
+}
+
+#side-nav-title {
+	font-size: 1.2em;
+	color: #468966;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+
+#social-btns {
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+}
+
+#title-band {
+	background: #FFF0A5;
+	height: 50px;
+	display: table;
+	width: 100%;
+}
+
+#post-title {
+	text-align: left;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#post-title img {
+	display: table-cell;
+	vertical-align: middle;
+	padding: 10px;
+	height: 45px;
+	width: 45px;
+}
+
+.post-date {
+	font-weight: bold;
+	padding: 10px;
+	color: #468966;
+	text-align: right;
+	font-size: 0.80em;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.post-photo,
+.post-video,
+.post-audio,
+.post-panorama,
+.post-text,
+.post-photoset,
+.post-chat,
+.post-link,
+.post-quote {
+	display: inline-block;
+	margin: 15px 15px 15px 275px;
+    float: left;
+}
+
+.caption {
+	text-align: left;
+	max-width: 600px; 
+}
+
+.card {
+    background: #FFF;
+    border: 0px solid #AAA;
+    border-radius: 15px;
+    box-shadow: 0px 2px 3px #AAA;
+    padding: 0px;
+}
+
+.post-actions {
+	float: left;	
+	font-size: 0.80em;
+	text-align: left;
+	display: table;
+}
+
+.post-actions li {
+	float: left;
+	list-style: none;
+	color: gray;
+	margin: 0 15px 0 0;
+}
+
+.post-tags {
+	font-weight: lighter;
+}
+
+#footer {
+	font-size: 0.85em;
+	margin-top: 50px;
+	text-align: center;
+	width: 100%;
+	color: #8E2800;
+	height: 100%;
+	background: #FFB03B;
+}
+
+#footer a {
+	color: #8E2800;
+}
+
+#footer a:hover {
+	border-bottom: solid 2px white;
+}
+
+#footer-contents {
+	font-size: 1.15em;
+	font-weight: bold;
+	color: #FFB03B;
+	background: #8E2800;
+}
+
+#footer-contents a {
+	color: #FFB03B;
+}
+
+#footer-contents a:hover {
+	border-bottom: solid 3px white;
+}
+
+.outer {
+    display: table;
+    height: 100px;
+    width: 100%;
+}
+
+.middle {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+
+
+/*Social Buttons*/
+
+
+.icon-button {
+	background-color: white;
+	border-radius: 3.6rem;
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2.0rem;
+	height: 3.6rem;
+	line-height: 3.6rem;
+	margin: 0 5px;
+	position: relative;
+	text-align: center;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+	width: 3.6rem;
+}
+
+/* Circle */
+.icon-button span {
+	border-radius: 0;
+	display: block;
+	height: 0;
+	left: 50%;
+	margin: 0;
+	position: absolute;
+	top: 50%;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 0;
+}
+.icon-button:hover span {
+	width: 3.6rem;
+	height: 3.6rem;
+	border-radius: 3.6rem;
+	margin: -1.8rem;
+}
+
+.twitter span {
+	background-color: #4099ff;
+}
+.facebook span {
+	background-color: #3B5998;
+}
+.google-plus span {
+	background-color: #db5a3c;
+}
+
+/* Icons */
+.icon-button i {
+	background: none;
+	color: white;
+	height: 3.6rem;
+	left: 0;
+	position: relative;
+	margin: 15px;
+	line-height: 3.6rem;
+	top: 0;
+	-webkit-transition: all 0.3s;
+	   -moz-transition: all 0.3s;
+	     -o-transition: all 0.3s;
+	        transition: all 0.3s;
+	width: 3.6rem;
+	z-index: 10;
+}
+.icon-button .icon-twitter {
+	color: #4099ff;
+}
+.icon-button .icon-facebook {
+	color: #3B5998;
+}
+.icon-button .icon-google-plus {
+	color: #db5a3c;
+}
+.icon-button:hover .icon-twitter,
+.icon-button:hover .icon-facebook,
+.icon-button:hover .icon-google-plus {
+	color: white;
+}

@@ -1,0 +1,373 @@
+<!DOCTYPE HTML>
+
+		<!--
+		Created by Preetesh Jain.
+
+              ___       ___    
+             /  /\     /  /\   
+            /  /::\   /  /:/   
+           /  /:/\:\ /__/::\   
+          /  /:/~/:/ \__\/\:\  
+         /__/:/ /:/     \  \:\ 
+         \  \:\/:/       \__\:\
+          \  \::/        /  /:/
+           \  \:\       /__/:/ 
+            \  \:\      \__\/  
+             \__\/             
+
+        Contact: preeteshjain17@gmail.com
+		Twitter: @preeteshjain
+		-->
+
+<html lang="en">
+
+	<head>
+		<title>{Title}</title>
+        <link rel="shortcut icon" href="{Favicon}">
+        <link rel="alternate" type="application/rss+xml" href="{RSS}">
+        {block:Description}
+            <meta name="description" content="{MetaDescription}" />
+        {/block:Description}
+
+		<link rel="stylesheet" href="http://static.tumblr.com/w8b4xyr/DH7n7ohrs/normalize.css" type="text/css" media="screen">
+		<link rel="stylesheet" href="http://static.tumblr.com/w8b4xyr/SxIn7ohrp/grid.css" type="text/css" media="screen">
+
+		<!-- GOOGLE FONTS - OPEN SANS and COUSTARD -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+
+		<link rel="stylesheet" href="css/style.css" type="text/css" media="screen">
+
+        <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/font-awesome/3.1.1/css/font-awesome.css" media="screen">
+
+        <!-- DISQUS API -->
+        <meta name='text:Disqus Shortname' content='' />
+
+	</head>
+
+	<body>
+		<div id="nav-header">
+			<div class="container clearfix">
+				<div class="grid_3" id="blog-logo">
+					<h1><a href="/">{Title}</a></h1>
+	    		</div>
+	    		<div id="nav-items" class="grid_8">
+	    			<ul class="nav">
+	    				<li><a target="_blank" href="/archive">Archive</a></li>
+	    				<li><a target="_blank" href="{RSS}">RSS</a></li>
+	    				<li><a target="_blank" href="http://facebook.com/FlyingDogsInc">Company</a></li>
+	    				<li><a target="_blank" href="mailto:preeteshjain17@gmail.com">Contact</a></li>
+	    			</ul>
+	    		</div>
+	    	</div>
+	    </div>
+
+	    <div id="body-contents" class="container clearfix">
+
+	    	<p id="blog-desc">{Description}</p>
+
+            <div id="side-nav" class="card">
+                <div id="title-band">
+                    <div id="side-nav-title">Connect</div>
+                </div>
+                <div id="social-btns">
+                    <a target="_blank" href="http://twitter.com/preeteshjain" class="icon-button twitter"><i class="icon-twitter"></i><span>
+                    </span></a>
+
+                    <a target="_blank" href="http://facebook.com/preeteshjain17" class="icon-button facebook"><i class="icon-facebook"></i><span></span></a>
+                    
+                    <a target="_blank" href="http://plus.google.com/+PreeteshJain17" class="icon-button google-plus"><i class="icon-google-plus"></i><span></span></a>
+                </div>
+            </div>
+
+	    	<div id="posts">
+            {block:Posts}
+
+	            {block:Text}
+                    <div class="card post-text">
+                        <div id="title-band">
+                            <div id="post-title"><img src="http://static.tumblr.com/w8b4xyr/fF1n7vpn4/text.png"></div>
+                            {block:Date}<div class="post-date">{Month} {DayOfMonth}, {ShortYear}</div>{/block:Date}
+                        </div>
+                        <div id="post">
+                            {block:Title}
+                                <h3><a href="{Permalink}">{Title}</a></h3>
+                            {/block:Title}
+                            <div class="caption">{Body}</div>
+                        </div>
+                        <ul class="post-actions">
+                            <li>{LikeButton color="grey" size="20"}</li>
+                            <li>{NoteCountWithLabel}</li>
+                            <li>
+                                <a target-"_blank" href="{Permalink}">
+                                    <img width="30" src="http://static.tumblr.com/w8b4xyr/Vdpn7u2dl/permalink-icon.png"/>
+                                </a>
+                            </li>
+                            <li>{ReblogButton color="grey" size="20"}</li>
+                            {block:HasTags}<li class="post-tags">{block:Tags} <a href="{TagURL}">#{Tag}</a> {/block:Tags}</li>{/block:HasTags}
+                        </ul>
+                    </div>
+                {/block:Text}
+
+                {block:Photo}
+                    <div class="card post-photo">
+                        <div id="title-band">
+                            <div id="post-title"><img src="http://static.tumblr.com/w8b4xyr/LOpn7vpmz/photo.png"></div>
+                            {block:Date}<div class="post-date">{Month} {DayOfMonth}, {ShortYear}</div>{/block:Date}
+                        </div>
+                        <div  id="post">
+                            <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+                            {block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </div>
+                        <ul class="post-actions">
+                            <li>{LikeButton size="20" color="grey"}</li>
+                            <li>{NoteCountWithLabel}</li>
+                            <li>
+                                <a target-"_blank" href="{Permalink}">
+                                    <img width="30" src="http://static.tumblr.com/w8b4xyr/Vdpn7u2dl/permalink-icon.png"/>
+                                </a>
+                            </li>
+                            <li>{ReblogButton color="grey" size="20"}</li>
+                            {block:HasTags}<li class="post-tags">{block:Tags} <a href="{TagURL}">#{Tag}</a> {/block:Tags}</li>{/block:HasTags}
+                        </ul>
+                    </div>
+                {/block:Photo}
+
+                {block:Panorama}
+                    <div class="card post-panorama">
+                        <div id="title-band">
+                            <div id="post-title"><img src="http://static.tumblr.com/w8b4xyr/LOpn7vpmz/photo.png"></div>
+                            {block:Date}<div class="post-date">{Month} {DayOfMonth}, {ShortYear}</div>{/block:Date}
+                        </div>
+                        <div id="post">
+                            {LinkOpenTag}
+                                <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                            {LinkCloseTag}{block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </div>
+                        <ul class="post-actions">
+                            <li>{LikeButton size="20" color="grey"}</li>
+                            <li>{NoteCountWithLabel}</li>
+                            <li>
+                                <a target-"_blank" href="{Permalink}">
+                                    <img width="30" src="http://static.tumblr.com/w8b4xyr/Vdpn7u2dl/permalink-icon.png"/>
+                                </a>
+                            </li>
+                            <li>{ReblogButton color="grey" size="20"}</li>
+                            {block:HasTags}<li class="post-tags">{block:Tags} <a href="{TagURL}">#{Tag}</a> {/block:Tags}</li>{/block:HasTags}
+                        </ul>
+                    </div>
+                {/block:Panorama}
+
+                {block:Photoset}
+                    <div class="card post-photoset">
+                        <div id="title-band">
+                            <div id="post-title"><img src="http://static.tumblr.com/w8b4xyr/LOpn7vpmz/photo.png"></div>
+                            {block:Date}<div class="post-date">{Month} {DayOfMonth}, {ShortYear}</div>{/block:Date}
+                        </div>
+                        <div id="post">
+                            {Photoset-500}{block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </div>
+                        <ul class="post-actions">
+                            <li>{LikeButton size="20" color="grey"}</li>
+                            <li>{NoteCountWithLabel}</li>
+                            <li>
+                                <a target-"_blank" href="{Permalink}">
+                                    <img width="30" src="http://static.tumblr.com/w8b4xyr/Vdpn7u2dl/permalink-icon.png"/>
+                                </a>
+                            </li>
+                            <li>{ReblogButton color="grey" size="20"}</li>
+                            {block:HasTags}<li class="post-tags">{block:Tags} <a href="{TagURL}">#{Tag}</a> {/block:Tags}</li>{/block:HasTags}
+                        </ul>
+                    </div>
+                {/block:Photoset}
+
+                {block:Quote}
+                    <div class="card post-quote">
+                        <div id="title-band">
+                            <div id="post-title"><img src="http://static.tumblr.com/w8b4xyr/keBn7vpn2/quote.png"></div>
+                            {block:Date}<div class="post-date">{Month} {DayOfMonth}, {ShortYear}</div>{/block:Date}
+                        </div>
+                        <div id="post">
+                            "{Quote}"
+
+                            {block:Source}
+                                <div class="source">{Source}</div>
+                            {/block:Source}
+                        </div>
+                        <ul class="post-actions">
+                            <li>{LikeButton size="20" color="grey"}</li>
+                            <li>{NoteCountWithLabel}</li>
+                            <li>
+                                <a target-"_blank" href="{Permalink}">
+                                    <img width="30" src="http://static.tumblr.com/w8b4xyr/Vdpn7u2dl/permalink-icon.png"/>
+                                </a>
+                            </li>
+                            <li>{ReblogButton color="grey" size="20"}</li>
+                            {block:HasTags}<li class="post-tags">{block:Tags} <a href="{TagURL}">#{Tag}</a> {/block:Tags}</li>{/block:HasTags}
+                        </ul>
+                    </div>
+                {/block:Quote}
+
+                {block:Link}
+                    <div class="card post-link">
+                        <div id="title-band">
+                            <div id="post-title"><img src="http://static.tumblr.com/w8b4xyr/P2Wn7vpmx/link.png"></div>
+                            {block:Date}<div class="post-date">{Month} {DayOfMonth}, {ShortYear}</div>{/block:Date}
+                        </div>
+                        <div id="post">
+                            <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                            {block:Description}
+                                <div class="caption">{Description}</div>
+                            {/block:Description}
+                        </div>
+                        <ul class="post-actions">
+                            <li>{LikeButton size="20" color="grey"}</li>
+                            <li>{NoteCountWithLabel}</li>
+                            <li>
+                                <a target-"_blank" href="{Permalink}">
+                                    <img width="30" src="http://static.tumblr.com/w8b4xyr/Vdpn7u2dl/permalink-icon.png"/>
+                                </a>
+                            </li>
+                            <li>{ReblogButton color="grey" size="20"}</li>
+                            {block:HasTags}<li class="post-tags">{block:Tags} <a href="{TagURL}">#{Tag}</a> {/block:Tags}</li>{/block:HasTags}
+                        </ul>
+                    </div>
+                {/block:Link}
+
+                {block:Chat}
+                    <div class="card post-chat">
+                        <div id="title-band">
+                            <div id="post-title"><img src="http://static.tumblr.com/w8b4xyr/TAXn7vpmv/chat.png"></div>
+                            {block:Date}<div class="post-date">{Month} {DayOfMonth}, {ShortYear}</div>{/block:Date}
+                        </div>
+                        <div id="post">
+                            {block:Title}
+                                <h3><a href="{Permalink}">{Title}</a></h3>
+                            {/block:Title}
+                        </div>
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}{Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                        <ul class="post-actions">
+                            <li>{LikeButton size="20" color="grey"}</li>
+                            <li>{NoteCountWithLabel}</li>
+                            <li>
+                                <a target-"_blank" href="{Permalink}">
+                                    <img width="30" src="http://static.tumblr.com/w8b4xyr/Vdpn7u2dl/permalink-icon.png"/>
+                                </a>
+                            </li>
+                            <li>{ReblogButton color="grey" size="20"}</li>
+                            {block:HasTags}<li class="post-tags">{block:Tags} <a href="{TagURL}">#{Tag}</a> {/block:Tags}</li>{/block:HasTags}
+                        </ul>
+                    </div>
+                {/block:Chat}
+
+
+                {block:Video}
+                    <div class="card post-video">
+                        <div id="title-band">
+                            <div id="post-title"><img src="http://static.tumblr.com/w8b4xyr/3QJn7vpn7/video.png"></div>
+                            {block:Date}<div class="post-date">{Month} {DayOfMonth}, {ShortYear}</div>{/block:Date}
+                        </div>
+                        <div id="post">
+                            {Video-500}
+                            {block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </div>
+                        <ul class="post-actions">
+                            <li>{LikeButton size="20" color="grey"}</li>
+                            <li>{NoteCountWithLabel}</li>
+                            <li>
+                                <a target-"_blank" href="{Permalink}">
+                                    <img width="30" src="http://static.tumblr.com/w8b4xyr/Vdpn7u2dl/permalink-icon.png"/>
+                                </a>
+                            </li>
+                            <li>{ReblogButton color="grey" size="20"}</li>
+                            {block:HasTags}<li class="post-tags">{block:Tags} <a href="{TagURL}">#{Tag}</a> {/block:Tags}</li>{/block:HasTags}
+                        </ul>
+                    </div>
+                {/block:Video}
+
+                {block:Audio}
+                    <div class="card post-audio">
+                        <div id="title-band">
+                            <div id="post-title"><img src="http://static.tumblr.com/w8b4xyr/KDJn7vpmt/audio.png"></div>
+                            {block:Date}<div class="post-date">{Month} {DayOfMonth}, {ShortYear}</div>{/block:Date}
+                        </div>
+                        <div id="post">
+                            {AudioEmbed}{block:Caption}
+                                <div class="caption">{Caption}</div>
+                            {/block:Caption}
+                        </div>
+                        <ul class="post-actions">
+                            <li>{LikeButton size="20" color="grey"}</li>
+                            <li>{NoteCountWithLabel}</li>
+                            <li>
+                                <a target-"_blank" href="{Permalink}">
+                                    <img width="30" src="http://static.tumblr.com/w8b4xyr/Vdpn7u2dl/permalink-icon.png"/>
+                                </a>
+                            </li>
+                            <li>{ReblogButton color="grey" size="20"}</li>
+                            {block:HasTags}<li class="post-tags">{block:Tags} <a href="{TagURL}">#{Tag}</a> {/block:Tags}</li>{/block:HasTags}
+                        </ul>
+                    </div>
+                {/block:Audio}
+
+            {/block:Posts}
+
+            <!-- DISQUS API -->
+            {block:PermalinkPagination}
+                {block:IfDisqusShortname}
+                    <div id="disqus_thread"></div>
+                    <script type="text/javascript">                        
+                        var disqus_shortname = 'preeteshjain';
+                        /* * * DON'T EDIT BELOW THIS LINE * * */
+                        (function() {
+                            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+                        })();
+                    </script>
+                    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                    <a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a>
+                {/block:IfDisqusShortname}
+            {/block:PermalinkPagination}
+
+            </div>
+        </div>
+
+        <div id="footer" class="container clearfix grid_12">
+
+            <div id="footer-contents" class="outer">
+                <div class="middle">
+                    {block:PreviousPage}
+                        <a href="{PreviousPage}">Previous Page</a>
+                    {/block:PreviousPage}
+                        <b>&nbsp; &#8214; &nbsp;</b>
+                    {block:NextPage}
+                        <a href="{NextPage}">Next Page</a>
+                    {/block:NextPage}
+                </div>
+            </div>
+
+            <p>
+                <b>TrumpCard</b> theme by <a target="_blank" href="http://twitter.com/preeteshjain"><b>Preetesh Jain</b></a>.
+            </p>
+        </div>
+
+    </body>
+
+</html>
