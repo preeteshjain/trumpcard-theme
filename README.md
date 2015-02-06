@@ -1,7 +1,7 @@
 trumpcard-theme
 ===============
 
-A simple yet elegant blog theme for (Tumblr)[http://tumblr.com]. The code is open-source so that anyone can contribute or fork and create new themes from the same codebase.
+A simple yet elegant blog theme for [Tumblr](http://tumblr.com). The code is open-source so that anyone can contribute or fork and create new themes from the same codebase.
 
 ## Install instructions:
 * Go to [tumblr.com/customize](http://www.tumblr.com/customize) and selet "Edit HTML" option.
